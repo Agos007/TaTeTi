@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TaTeTi</title>
+        <link rel="stylesheet" href="estilos.css">
+
+    </head>
+<body>
+    
+<h1>TaTeTi</h1>
+
+<div id="tablero">
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+    <button onclick="jugar(this)"></button>
+</div>
+
+<p id="turno">Turno: X</p>
+<button id="reiniciar"
+onclick="location.reload()">reiniciar</button>
+<div id="mensajeGanador"></div>
+
+
+
+<script>
+    
+let jugador = "X";
+
+    function jugar(boton) {
+
+        if (boton.innerHTML !== ""){
+            return;
+        }
+
+        boton.innerHTML = jugador
+        if (jugador == "X") {
+            jugador = "O";
+        } else {
+            jugador = "X";
+        }
+        document.getElementById("turno").innerHTML
+        =
+        "Turno: " + jugador;
+    }
+
+
+<button id="reiniciar" onclick="location.reload()">
+        Reinciar
+        </button>
+
+
+</script>
+<script src="java.js"></script>
+</body>
+</html>
